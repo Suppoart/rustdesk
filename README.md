@@ -69,7 +69,7 @@ sudo apt install -y zip g++ gcc git curl wget nasm yasm libgtk-3-dev clang libxc
         libclang-dev ninja-build libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libpam0g-dev
 ```
 
-### openSUSE Tumbleweed
+### openSUSE  Tumbleweed
 
 ```sh
 sudo zypper install gcc-c++ git curl wget nasm yasm gcc gtk3-devel clang libxcb-devel libXfixes-devel cmake alsa-lib-devel gstreamer-devel gstreamer-plugins-base-devel xdotool-devel pam-devel
