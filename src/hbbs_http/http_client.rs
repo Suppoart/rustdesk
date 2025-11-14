@@ -15,17 +15,6 @@ macro_rules! configure_http_client {
         // https://github.com/rustdesk/rustdesk/issues/11569
         // https://docs.rs/reqwest/latest/reqwest/struct.ClientBuilder.html#method.no_proxy
         let mut builder = $builder.no_proxy();
-<<<<<<< HEAD
-        #[cfg(any(target_os = "android", target_os = "ios"))]
-        match hbb_common::verifier::client_config() {
-            Ok(client_config) => {
-                builder = builder.use_preconfigured_tls(client_config);
-            }
-            Err(e) => {
-                hbb_common::log::error!("Failed to get client config: {}", e);
-            }
-        }
-=======
 
         match $tls_type {
             TlsType::Plain => {}
@@ -55,7 +44,6 @@ macro_rules! configure_http_client {
             }
         }
 
->>>>>>> upstream/master
         let client = if let Some(conf) = Config::get_socks() {
             let proxy_result = Proxy::from_conf(&conf, None);
 
